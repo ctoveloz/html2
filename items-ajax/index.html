@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<section id="container-items">
+		<a href="#" class="mfp-close">
+			<img src="items-ajax/imagenes-items/close-icon.png">
+		</a>
+		<img class="image-items" src="items-ajax/imagenes-items/items1.jpg" data-name="guillermo lopez" data-fecha="25/11">
+		<img class="image-items" src="items-ajax/imagenes-items/items2.jpg" data-name="guillermo lopez 2" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items3.jpg" data-name="guillermo lopez 3" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items4.jpg" data-name="guillermo lopez 4" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items5.jpg" data-name="guillermo lopez 5" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items6.jpg" data-name="guillermo lopez 6" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items7.jpg" data-name="guillermo lopez 7" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items8.jpg" data-name="guillermo lopez 8" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items9.jpg" data-name="guillermo lopez 9" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items10.jpg" data-name="guillermo lopez 10" data-fecha="">
+		<img class="image-items" src="items-ajax/imagenes-items/items10.jpg" data-name="guillermo lopez 11" data-fecha="">
+		<div id="box-item">
+			<p class="nombre-item"></p>
+		</div>
+	</section>
+
+<script type="text/javascript">
+	$(".image-items").bind('mousemove', function(e){
+	    $('#box-item').show().css({
+	       left:  e.pageX - 170,
+	       top:   e.pageY + 30
+	    });
+	});
+
+	$(".image-items").mouseenter(function(){
+		var nombreItemText = $(this).attr("data-name");
+		$(".nombre-item").text(nombreItemText);
+	})
+</script>	
+</body>
+</html>

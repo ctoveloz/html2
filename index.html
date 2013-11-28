@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body id="home-ls2">
+       <section class="home-container">
+            <section id="container-banner-home">
+                <div class="ls2-banner-home logo-ls2 opacity-effect"></div>
+                <div class="ls2-banner-home ls2-urban-text opacity-effect"></div>
+                <div class="ls2-banner-home ls2-verano-text opacity-effect"></div>
+                <div class="ls2-banner-home ls2-2014-text opacity-effect"></div>
+            </section>
+            <section class="descubra-container opacity-effect">
+                <p>Descubrí nuestra nueva colección de indumentaria de una forma diferente</p>
+            </section>
+            <section class="mira-video-container opacity-effect">
+                <a href="video.html">¡Mirá el video y participá de sorteos semanales y más!<span></span></a>
+            </section>
+       </section>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/jquery.waitforimages.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+           
+            // Animaciones Opcity
+            $("#home-ls2").css("background-image", "url(./img/bg-home.jpg)").waitForImages({
+                waitForAll: true,
+                finished: function () {
+                    var delay = 0;
+                    $('.opacity-effect').each(function () {
+                        $(this).delay(delay).animate({
+                            opacity: 1
+                        }, 500);
+                        delay += 500;
+                    });
+                }
+            });
+        });
+
+
+        </script>
+    </body>
+</html>

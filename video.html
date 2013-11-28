@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body id="video-ls2">
+        <div class="logo-ls2 opacity-effect"></div>
+        <section class="container-video">
+            <section class="container-only-video">
+                <iframe width="781" height="360" style="margin-top: 42px; margin-left: 29px;" src="//www.youtube.com/embed/Q8QOL1Hx-uQ?autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
+            </section>
+            <section class="container-participa-sorteo opacity-effect">
+                <a href="contacto.html">Participá de los sorteos<span></span></a>
+            </section>    
+        </section>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/jquery.waitforimages.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+
+            // Animaciones Opcity
+            $("#video-ls2").css("background-image", "url(./img/bg-video.jpg)").waitForImages({
+                waitForAll: true,
+                finished: function () {
+                    var delay = 0;
+                    $('.opacity-effect').each(function () {
+                        $(this).delay(delay).animate({
+                            opacity: 1
+                        }, 500);
+                        delay += 500;
+                    });
+                }
+            });
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body id="contacto-ls2">
+        <section class="container-contacto">
+            <section class="container-form">
+                <h2>Completá tus datos y participá por prendas LS2 URBN.</h2>
+                <h3>¡Hay premios semanales y mensuAles!</h3>
+                <form id="form-contactl2" method="post">
+                    <fieldset>
+                        <label id="label-nombre">nombre</label>
+                        <input type="text">
+                    </fieldset>
+                    <fieldset>
+                        <label id="label-apellido">apellido</label>
+                        <input type="text">
+                    </fieldset>
+                    <fieldset>
+                        <label id="label-dni">DNI</label>
+                        <input type="text">
+                    </fieldset>
+                    <fieldset>
+                        <label id="label-email">email</label>
+                        <input type="text">
+                    </fieldset>
+                    <fieldset>
+                        <label id="label-telefono">telefono</label>
+                        <input type="text">
+                    </fieldset>
+                    <fieldset class="check-container">
+                        <label id="label-suscripcion">Suscripción a Newsletter</label>
+                        <input type="checkbox">
+                    </fieldset>
+                    <fieldset class="check-container">
+                        <label id="label-bases">Bases y condiciones</label>
+                        <input type="checkbox">
+                    </fieldset>
+                    <a href="#" class="participar-button">participar</a>
+                </form>
+            </section>
+            <section class="container-banner-contacto">
+                <div class="ls2-banner-contacto ls2-text-registro opacity-effect"></div>
+                <div class="ls2-banner-contacto newrider-text-contact opacity-effect"></div>
+                <div class="ls2-banner-contacto logo-banner-contact opacity-effect"></div>
+            </section>
+            <section class="conoce-premios opacity-effect">
+                <a href="items-ajax/index.html" class="conoce-items">ConocÉ nuestros premios<span class="arrow-conoce"></span></a>
+            </section>
+        </section>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.waitforimages.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            // Cargar Items por Ajax
+            $('.conoce-items').magnificPopup({
+              type: 'ajax',
+              alignTop: true,
+              overflowY: 'scroll'
+            });
+
+            // Animaciones Opcity
+            $("#contacto-ls2").css("background-image", "url(./img/bg-video.jpg)").waitForImages({
+                waitForAll: true,
+                finished: function () {
+                    var delay = 0;
+                    $('.opacity-effect').each(function () {
+                        $(this).delay(delay).animate({
+                            opacity: 1
+                        }, 500);
+                        delay += 500;
+                    });
+                }
+            });
+        });
+        </script>
+    </body>
+</html>

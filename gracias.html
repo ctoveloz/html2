@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body id="gracias-ls2">
+        <section class="gracias-participar">
+            <p class="participar-text">¡Gracias por participar!</p>
+            <p class="pronto-anunciaremos">Pronto anunciaremos a los ganadores en nuestra fanpage.</p>
+            <p class="sumar-chances">Para sumar más chances de ganar</p>
+            <a class="invita-amigos" href="#">invita amigos</a>
+            <p class="ver-de-nuevo">Ver de nuevo</p>
+            <a class="icon-ver-de-nuevo" href="#">verde de nuevo</a>
+        </section>
+        <section class="container-ver-ganadores">
+            <a class="ver-ganadores" href="items-ajax/index.html"></a>
+        </section>
+        <section id="container-banner-home">
+            <div class="ls2-banner-home logo-ls2 opacity-effect"></div>
+            <div class="ls2-banner-home ls2-urban-text opacity-effect"></div>
+            <div class="ls2-banner-home ls2-verano-text opacity-effect"></div>
+            <div class="ls2-banner-home ls2-2014-text opacity-effect"></div>
+        </section>
+        <section class="container-conoce-linea opacity-effect">
+            <a href="#">Conocé toda la línea completa y comprala acá</a>
+        </section>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/jquery.waitforimages.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            // Animaciones Opcity
+            $("#gracias-ls2").css("background-image", "url(./img/bg-gracias.jpg)").waitForImages({
+                waitForAll: true,
+                finished: function () {
+                    var delay = 0;
+                    $('.opacity-effect').each(function () {
+                        $(this).delay(delay).animate({
+                            opacity: 1
+                        }, 500);
+                        delay += 500;
+                    });
+                }
+            });
+
+             // Cargar Items por Ajax
+            $('.ver-ganadores').magnificPopup({
+              type: 'ajax',
+              alignTop: true,
+              overflowY: 'scroll'
+            });
+        });
+        </script>
+    </body>
+</html>
